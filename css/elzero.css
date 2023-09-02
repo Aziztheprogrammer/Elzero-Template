@@ -66,6 +66,7 @@ header .container {
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
+	position: relative;
 }
 
 header .logo {
@@ -74,19 +75,23 @@ header .logo {
 	color: var(--main-color);
 }
 
-header ul {
+header .links {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
 }
 
-header ul li {
+header .links > li {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-header ul li a {
+header .links > li:last-child:hover > .menu {
+	display: flex !important;
+}
+
+header .links > li > a {
 	font-weight: 400;
 	color: #000;
 	font-size: 1.1rem;
@@ -95,12 +100,12 @@ header ul li a {
 	padding: 30px 25px;
 }
 
-header ul a:hover {
+header .links > li > a:hover {
 	color: var(--main-color);
 	background-color: #eee;
 }
 
-header ul a::after {
+header .links > li > a::after {
 	content: "";
 	width: 0%;
 	height: 4px;
@@ -111,7 +116,7 @@ header ul a::after {
 	background-color: var(--main-color);
 }
 
-header ul a:hover::after {
+header .links > li > a:hover::after {
 	width: 100%;
 }
 
@@ -122,14 +127,91 @@ header ul a:hover::after {
 		padding: 25px 25px 10px 25px;
 	}
 
-	header ul {
+	header .links {
 		margin: 0px auto;
 	}
 
-	header ul li a {
+	header .links > li > a {
 		font-size: 0.9rem;
 		padding: 15px 15px;
 	}
+}
+
+header div.menu {
+	background-color: white;
+	border-bottom: var(--main-color) 4px solid;
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	column-gap: 20px;
+	align-items: flex-start;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	transform: translateY(100%);
+	z-index: 3;
+	display: none;
+}
+
+header div.menu .menu-img {
+	max-width: 450px;
+}
+
+header div.menu .menu-img img {
+	width: 100%;
+	height: auto;
+}
+
+@media (max-width: 992px) {
+	header div.menu .menu-img {
+		display: none;	
+  }	
+}
+
+header div.menu ul {
+	flex: 1;
+}
+
+header div.menu ul li {
+	padding: 15px 0px;
+	border-bottom: 1px #ddd solid;
+	width: 100%;
+	transition: 0.7s all ease;
+}
+
+header div.menu ul li:hover {
+	background-color: #eee;
+}
+
+header div.menu ul li:last-child {
+	border-bottom: none;
+}
+
+header div.menu ul li > a {
+	color: var(--main-color);
+	font-weight: 700;
+}
+
+header div.menu ul li > a i {
+	margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+	header div.menu {
+		padding: 30px 0px;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: flex-start;
+  }	
+
+  header .menu .menu-links li {
+  	padding-left: 20px;
+  }
+
+  header .menu .menu-1 li:last-child {
+  	border-bottom: 1px #ddd solid !important;
+  }
 }
 
 /*End Header*/
@@ -141,8 +223,14 @@ header ul a:hover::after {
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
-	min-height: 80vh;
+	height: calc(100vh - 80px);
 	display: flex;
+}
+
+@media (max-width: 768px) {
+	.landing {
+		height: calc(100vh - 110px);
+	}
 }
 
 .landing::after {
@@ -151,7 +239,7 @@ header ul a:hover::after {
 	background-color: var(--section-background);
 	width: 100%;
 	height: 100%;
-	top: -10%;
+	top: -15%;
 	left: 0px;
 	transform: skewY(-4deg);
 	z-index: -1;
@@ -216,7 +304,7 @@ header ul a:hover::after {
 .landing .container > a {
 	position: absolute;
 	color: var(--main-color);
-	bottom: 10px;
+	bottom: 10%;
 	left: 50%;
 	transform: translateX(-50%);
 	animation: 1s arrowShake infinite linear;
@@ -224,16 +312,16 @@ header ul a:hover::after {
 
 @keyframes arrowShake {
 	0% {
-		bottom: 10px;
+		bottom: 10%;
 	}
 	25% {
-		bottom: 0px;
+		bottom: 5%;
 	}
 	50% {
-		bottom: 10px;
+		bottom: 10%;
 	}
 	100% {
-		bottom: 0px;
+		bottom: 5%;
 	}
 }
 
