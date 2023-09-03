@@ -505,6 +505,231 @@ section.articles .container .article:hover .read-more i {
 
 /*End Articles Section*/
 
+/*Start Gallery Section*/
 
+section.gallery {
+	padding: var(--main-padding) 0px;
+	background-color: var(--section-background);
+}
 
+section.gallery .container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	grid-gap: 40px;
+}
+
+section.gallery .container .box {
+	border: 15px solid white;
+	overflow: hidden;
+	position: relative;
+}
+
+section.gallery .container .box::after {
+	content: "";
+	position: absolute;
+	width: 0%;
+	height: 0%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	opacity: 0.1;
+	animation: 0.2s linear;
+}
+
+section.gallery .container .box:hover::after {
+	animation-name: WhiteLayer;
+}
+
+section.gallery .container .box:hover img {
+	transform: scale(1.2) rotate(5deg);
+}
+
+@keyframes WhiteLayer {
+	0% {
+		width: 0%;
+		height: 0%;
+	}
+	100% {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+section.gallery .container .box img {
+	width: 100%;
+	height: 100%;
+	transition: 0.4s ease all;
+}
+
+/*End Gallery Section*/
+
+/*Start Features Section*/
+
+section.features {
+	padding: var(--main-padding) 0px;
+	background-color: white;
+}
+
+section.features .container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 40px;
+}
+
+section.features .container .feat {
+	background-color: white;
+	border: 1px #ddd solid;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	overflow: hidden
+}
+
+section.features .container .feat:hover > .feat-img {
+	transform: rotate3d(0, 1, 0, 180deg) skewY(-15deg) translateY(-50px);
+}
+
+section.features .container .feat:hover > button::after {
+
+}
+
+section.features .container .feat .feat-img {
+	overflow: hidden;
+	transform: skewY(-15deg) translateY(-50px);
+	transition: 0.4s all ease;
+}
+
+section.features .container .feat .feat-img::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: skewY(180deg);
+}
+
+section.features .container .feat:hover > button {
+	color: white;
+}
+
+section.features .container .feat:hover > button::after {
+	width: 100%;
+}
+
+section.features .container .feat:nth-child(1) .feat-img::after {
+	background-color: #f44036;
+}
+
+section.features .container .feat:nth-child(2) .feat-img::after {
+	background-color: #009688;
+}
+
+section.features .container .feat:nth-child(3) .feat-img::after {
+	background-color: #03a9f4;
+}
+
+section.features .container .feat .feat-img img {
+	width: 100%;
+	height: 100%;
+	mix-blend-mode: normal;
+}
+
+section.features .container .feat .text {
+	padding: 20px 30px;
+	line-height: 2;
+}
+
+section.features .container .feat .text h2 {
+	width: fit-content;
+	margin: 0px auto 25px;
+	font-size: 2.5rem;
+	position: relative;
+}
+
+section.features .container .feat .text h2::after {
+	content: "";
+	width: 70%;
+	height: 4px;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+section.features .feat:nth-child(1) .text h2::after {
+	background-color: #f44036;
+}
+
+section.features .feat:nth-child(2) .text h2::after {
+	background-color: #009688;
+}
+
+section.features .feat:nth-child(3) .text h2::after {
+	background-color: #03a9f4;
+}
+
+section.features .container .feat .text p {
+	font-size: 1.2rem;
+	color: #666;
+}
+
+section.features .container .feat button {
+	border: 3px solid;
+	padding: 10px 30px;
+	background-color: white;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	margin: 20px auto;
+	font-weight: 700;
+	transition: 0.4s all ease;
+	position: relative;
+	z-index: 1;
+}
+
+section.features .feat:nth-child(1) button {
+	color: #f44036;
+	border-color: #f44036;
+}
+
+section.features .feat:nth-child(2) button {
+	color: #009688;
+	border-color: #009688;
+}
+
+section.features .feat:nth-child(3) button {
+	color: #03a9f4;
+	border-color: #03a9f4;
+}
+
+section.features .container .feat button::after {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 0%;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+	transition: 0.4s ease all;
+}
+
+section.features .container .feat:nth-child(1) button::after {
+	background-color: #f44036; 
+}
+
+section.features .container .feat:nth-child(2) button::after {
+	background-color: #009688; 
+}
+
+section.features .container .feat:nth-child(3) button::after {
+	background-color: #03a9f4; 
+}
+
+/*End Features Section*/
 
