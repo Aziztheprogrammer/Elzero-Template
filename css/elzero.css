@@ -110,7 +110,7 @@ a {
 	}
 	100% {
 		right: 0px;
-		height: calc(100% + 1px);
+		height: 100%;
 		width: 60%;
 		border-radius: 0%;
 	}
@@ -125,7 +125,7 @@ a {
 	}
 	100% {
 		left: 0px;
-		height: calc(100% + 1px);
+		height: 100%;
 		width: 60%;
 		border-radius: 0%;
 	}
@@ -732,4 +732,67 @@ section.features .container .feat:nth-child(3) button::after {
 }
 
 /*End Features Section*/
+
+/*Start Testimoials Section*/
+
+section.testimonials {
+	padding: var(--main-padding) 0px;
+	background-color: var(--section-background);
+}
+
+section.testimonials .container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 40px;
+}
+
+section.testimonials .container .review {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 15px;
+	position: relative;
+}
+
+section.testimonials .container .review img {
+	position: absolute;
+	border-radius: 50%;
+	top: 0px;
+	right: 0px;
+	transform: translate(10%, -50%);
+	max-width: 100px;
+	height: auto;
+	border: var(--section-background) 10px solid;
+}
+
+section.testimonials .container .review h2 {
+	font-size: 1.2rem;
+}
+
+section.testimonials .container .review span {
+	color: #666;
+}
+
+section.testimonials .container .review .stars .filled {
+	color: #ffc107;
+}
+
+section.testimonials .container .review p {
+	color: #666;
+	line-height: 1.5;
+}
+
+/*End Testimoials Section*/
+
+/*Start Team Members Section*/
+
+section.team-members
+
+/*End Team Members Section*/
+
 
