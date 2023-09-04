@@ -791,7 +791,73 @@ section.testimonials .container .review p {
 
 /*Start Team Members Section*/
 
-section.team-members
+section.team-members {
+	background-color: white;
+	padding: var(--main-padding) 0px;
+}
+
+section.team-members .container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-gap: 80px;
+}
+
+section.team-members .container .member {
+	background-color: var(--section-background);
+	padding: 20px;
+	border-radius: 10px;
+	min-height: 450px;
+	position: relative;
+	transition: 0.7s all ease;
+}
+
+section.team-members .container .member:hover {
+	filter: grayscale(100%);
+}
+
+section.team-members .container .member .social-icons {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	row-gap: 20px;
+	right: 20px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+section.team-members .container .member .social-icons a {
+	color: #666;
+}
+
+section.team-members .container .member .info {
+	position: absolute;
+	left: 20px;
+	bottom: 20px;
+	line-height: 1.5;
+}
+
+section.team-members .container .member .info h2 {
+	color: var(--main-color);
+}
+
+section.team-members .container .member > img {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	transform: translate(-10%, -60%);
+	height: 60%;
+	width: auto;
+	border-radius: 10px;
+	margin-left: 20px;
+	transition: 0.7s ease all;
+}
+
+section.team-members .container .member:hover > img {
+	filter: grayscale(100%);
+} 
 
 /*End Team Members Section*/
 
