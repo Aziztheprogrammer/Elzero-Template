@@ -1089,6 +1089,7 @@ section.how-it-works .container .steps {
 
 	section.how-it-works .container > img {
 		margin: 0px auto;
+		max-width: 100%;
 	}
 }
 
@@ -1139,4 +1140,189 @@ section.how-it-works .container .steps .box .text p {
 }
 
 /*End How It Works Section*/
+
+/*Start Latest Events Section*/
+
+section.latest-events {
+	background-color: white;
+	padding: var(--main-padding) 0px;
+	position: relative;
+	z-index: 1;
+}
+
+section.latest-events::after {
+	content: url("../images/dots-64f1b048acd27.webp");
+	position: absolute;
+	top: 200px;
+	right: 0px;
+	z-index: -1;
+}
+
+section.latest-events::before {
+	content: url("../images/dots-64f1b048acd27.webp");
+	position: absolute;
+	bottom: 20%;
+	left: 0px;
+	z-index: -1;
+}
+
+section.latest-events .container {
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section.latest-events .container > img {
+	max-width: 450px
+}
+
+@media (max-width: 992px) {
+	section.latest-events .container > img {
+		display: none;
+	}
+}
+
+section.latest-events .container .content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	flex-grow: 1;
+	row-gap: 25px;
+	max-width: 100%;
+}
+
+section.latest-events .container .content .timer {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 10px;
+}
+
+section.latest-events .container .content .timer > div {
+	background-color: white;
+	border: 1px solid #ddd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	row-gap: 25px;
+	transition: 0.4s ease all;
+	border-radius: 10px;
+}
+
+section.latest-events .container .content .timer > div:hover {
+	border: 1px solid var(--main-color);
+}
+
+section.latest-events .container .content .timer > div span:nth-child(1) {
+	color: var(--main-color);
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 20px 20px 0px 20px;
+}
+
+section.latest-events .container .content .timer > div span:nth-child(2) {
+	width: 100%;
+	padding: 10px 10px;
+	color: #666;
+	font-size: 0.9rem;
+	text-align: center;
+	position: relative;
+}
+
+section.latest-events .container .content .timer > div span:nth-child(2)::after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #ddd;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transition: 0.4s all ease;
+}
+
+section.latest-events .container .content .text {
+	line-height: 2;
+	text-align: center;
+}
+
+section.latest-events .container .content .text h2 {
+	font-size: 2rem;
+}
+
+section.latest-events .container .content .text p {
+	font-size: 1.2rem;
+	color: #666;
+	font-weight: 400;
+}
+
+section.latest-events > form {
+	padding: 20px;
+	margin: 100px auto 0px;
+	background-color: var(--section-background);
+	border-radius: 40px;
+	width: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+section.latest-events > form input {
+	padding: 20px;
+	background-color: white;
+	color: #666;
+	border-radius: 25px;
+	border: none;
+	margin-right: 20px;
+	flex-grow: 1;
+}
+
+section.latest-events > form input:focus {
+	outline: none;
+}
+
+section.latest-events > form input::placeholder {
+	transition: 0.4s ease all;
+}
+
+section.latest-events > form input:focus::placeholder {
+	color: white;
+}
+
+section.latest-events > form button {
+	padding: 20px;
+	background-color: var(--main-color);
+	color: white;
+	border: none;
+	border-radius: 25px;
+	font-weight: 700;
+	transition: 0.4s ease all;
+}
+
+section.latest-events > form button:hover {
+	background-color: #1787e0;
+}
+
+@media (max-width: 768px) {
+	section.latest-events > form {
+		width: 90%;
+		border-radius: 0px;
+	}
+
+	section.latest-events > form input,
+	section.latest-events > form button {
+		width: 100%;
+		border-radius: 0px;
+	}
+
+	section.latest-events > form input {
+		margin: 0px 0px 25px 0px;
+	}
+}
+
+/*End Latest Events Section*/
 
