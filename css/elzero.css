@@ -861,4 +861,96 @@ section.team-members .container .member:hover > img {
 
 /*End Team Members Section*/
 
+/*Start Services Section*/
+
+section.services {
+	background-color: var(--section-background);
+	padding: var(--main-padding) 0px;
+}
+
+section.services .container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 40px;
+}
+
+section.services .container .serv {
+	background-color: white;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	padding: 30px;
+	text-align: center;
+	position: relative;
+	transition: 0.4s ease all;
+	min-height: 220px;
+}
+
+section.services .container .serv:hover {
+	transform: translateY(-10px);
+}
+
+section.services .container .serv::after {
+	content: "";
+	background-color: var(--main-color);
+	position: absolute;
+	width: 0%;
+	height: 4px;
+	top: 0px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: 0.4s ease all;
+}
+
+section.services .container .serv:hover::after {
+	width: 100%;
+}
+
+section.services .container .serv > i {
+	color: #ddd;
+}
+
+section.services .container .serv > h2 {
+	color: var(--main-color);
+	margin: 20px auto 30px;
+}
+
+section.services .container .serv > .details {
+	position: absolute;
+	width: 100%;
+	background-color: #eee;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0px;
+	left: 0px;
+}
+
+section.services .container .serv > .details .num {
+	padding: 10px 30px;
+	font-size: 1.5rem;
+	color: white;
+	background-color: var(--main-color);
+	font-weight: 700;
+	position: relative;
+}
+
+section.services .container .serv > .details .num::after {
+	content: "";
+	position: absolute;
+	width: 60%;
+	height: 100%;
+	background-color: #ddd;
+	transform: skewX(-20deg) translateX(80%);
+	right: 0px;
+	top: 0px;
+
+}
+
+section.services .container .serv > .details a {
+	padding: 10px 20px;
+	color: var(--main-color);
+}
+
+/*End Services Section*/
+
 
