@@ -953,4 +953,105 @@ section.services .container .serv > .details a {
 
 /*End Services Section*/
 
+/*Start Our Skills Section*/
+
+section.our-skills {
+	background-color: white;
+	padding: var(--main-padding) 0px;
+}
+
+section.our-skills .container {
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 992px) {
+	section.our-skills .container > .our-skills-img {
+		display: none;
+	}
+}
+
+section.our-skills .container .skills {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	row-gap: 20px;
+	flex-grow: 1;
+}
+
+section.our-skills .container .skills span {
+	font-weight: 700;
+	font-size: 1.2rem;
+	text-align: left;
+}
+
+section.our-skills .container .skills .level {
+	background-color: #ddd;
+	width: 100%;
+	height: 40px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+section.our-skills .container .skills .level::after {
+	content: "";
+	background-color: var(--main-color);
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+section.our-skills .container .skills .level:nth-child(2)::after {
+	width: 80%;
+}
+
+section.our-skills .container .skills .level:nth-child(4)::after {
+	width: 85%;
+}
+
+section.our-skills .container .skills .level:nth-child(6)::after {
+	width: 70%;
+}
+
+section.our-skills .container .skills .level:nth-child(8)::after {
+	width: 80%;
+}
+
+section.our-skills .container .skills .level::before {
+	content: "";
+	background-color: white;
+	border: 1px #ddd solid;
+	padding: 5px;
+	color: var(--main-color);
+	position: absolute;
+	font-weight: 700;
+	font-size: 0.8rem;
+	right: 0px;
+	top: 0px;
+	transform: translateY(-150%);
+	border-radius: 3px;
+}
+
+section.our-skills .container .skills .level:nth-child(2)::before {
+	content: "80%";
+}
+
+section.our-skills .container .skills .level:nth-child(4)::before {
+	content: "85%";
+}
+
+section.our-skills .container .skills .level:nth-child(6)::before {
+	content: "70%";
+}
+
+section.our-skills .container .skills .level:nth-child(8)::before {
+	content: "80%";
+}
+
+/*End Our Skills Section*/
 
