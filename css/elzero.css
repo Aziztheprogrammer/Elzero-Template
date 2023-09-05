@@ -1326,3 +1326,131 @@ section.latest-events > form button:hover {
 
 /*End Latest Events Section*/
 
+/*Start Pricing Plans Section*/
+
+section.pricing-plans {
+	background-color: var(--section-background);
+	padding: var(--main-padding) 0px;
+}
+
+section.pricing-plans .container {
+	margin-top: 100px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	grid-gap: 40px;
+}
+
+section.pricing-plans .container .plan {
+	background-color: white;
+	box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+	position: relative;
+	z-index: 1;
+}
+
+section.pricing-plans .container .plan::after {
+	content: "";
+	background-color: #ddd;
+	opacity: 0.3;
+	transition: 0.4s ease all;
+	position: absolute;
+	width: 0%;
+	height: 50%;
+	right: 0px;
+	bottom: 0px;
+	z-index: -1;
+}
+
+section.pricing-plans .container .plan::before {
+	content: "";
+	background-color: #ddd;
+	opacity: 0.3;
+	transition: 0.4s ease all;
+	position: absolute;
+	width: 0%;
+	height: 50%;
+	left: 0px;
+	top: 0px;
+	z-index: -1;
+}
+
+section.pricing-plans .container .plan:hover::after,
+section.pricing-plans .container .plan:hover::before {
+	width: 100%;
+}
+
+section.pricing-plans .container .plan .plan-type {
+	padding: 20px 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 25px;
+}
+
+section.pricing-plans .container .plan .plan-type h2 {
+	font-weight: 700;
+}
+
+section.pricing-plans .container .plan .plan-type img {
+	max-width: 80px;
+	height: auto;
+}
+
+section.pricing-plans .container .plan .plan-type .price {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+section.pricing-plans .container .plan .plan-type .price span:nth-child(1) {
+	font-size: 3rem;
+	color: var(--main-color);
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+section.pricing-plans .container .plan .plan-type .price span:nth-child(2) {
+	color: #666;
+}
+
+section.pricing-plans .container .plan .benefits li {
+	padding: 20px;
+	position: relative;
+}
+
+section.pricing-plans .container .plan .benefits li::after {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #eee;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+section.pricing-plans .container .plan .benefits li i {
+	margin-right: 10px;
+}
+
+section.pricing-plans .container .plan .button {
+	width: 100%;
+	text-align: center;
+	padding: 25px 0px 40px 0px;
+}
+
+section.pricing-plans .container .plan button {
+	background-color: white;
+	border: var(--main-color) 2px solid;
+	color: var(--main-color);
+	padding: 10px 20px;
+	transition: 0.4s ease all;
+}
+
+section.pricing-plans .container .plan button:hover {
+	color: white;
+	background-color: var(--main-color);
+}
+
+/*End Pricing Plans Section*/
+
