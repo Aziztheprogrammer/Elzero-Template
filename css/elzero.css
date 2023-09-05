@@ -1129,6 +1129,21 @@ section.how-it-works .container .steps .box img {
 	width: auto;
 }
 
+@media (max-width: 768px) {
+	section.how-it-works .container .steps .box {
+		flex-wrap: wrap;
+	}
+
+	section.how-it-works .container .steps .box .text {
+		width: 100%;
+		text-align: center;
+	}
+
+	section.how-it-works .container .steps .box img {
+		margin: 0px auto;
+	}
+}
+
 section.how-it-works .container .steps .box .text h2 {
 	line-height: 2;
 }
@@ -1376,6 +1391,23 @@ section.pricing-plans .container .plan::before {
 section.pricing-plans .container .plan:hover::after,
 section.pricing-plans .container .plan:hover::before {
 	width: 100%;
+}
+
+section.pricing-plans .container .popular > span {
+	color: white;
+	background-color: var(--main-color);
+	font-weight: 700;
+	padding: 10px 20px;
+	position: absolute;
+	top: 48px;
+	right: -20px;
+	transform: rotate(90deg);
+}
+
+@media (min-width: 992px) {
+	section.pricing-plans .container .popular {
+		transform: translateY(-20px);
+	}
 }
 
 section.pricing-plans .container .plan .plan-type {
