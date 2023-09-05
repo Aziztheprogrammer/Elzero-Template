@@ -1346,6 +1346,21 @@ section.latest-events > form button:hover {
 section.pricing-plans {
 	background-color: var(--section-background);
 	padding: var(--main-padding) 0px;
+	position: relative;
+}
+
+section.pricing-plans::after {
+	content: url("../images/dots-64f1b048acd27.webp");
+	position: absolute;
+	right: 0px;
+	top: 100px;
+}
+
+section.pricing-plans::before {
+	content: url("../images/dots-64f1b048acd27.webp");
+	position: absolute;
+	left: 0px;
+	bottom: 100px;
 }
 
 section.pricing-plans .container {
@@ -1485,4 +1500,111 @@ section.pricing-plans .container .plan button:hover {
 }
 
 /*End Pricing Plans Section*/
+
+/*Start Top Videos Section*/
+
+section.top-videos {
+	background-color: white;
+	padding: var(--main-padding) 0px;
+}
+
+section.top-videos .container {
+	margin-top: 100px;
+}
+
+section.top-videos .container .video-player {
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	justify-content: center;
+	border: 1px solid #ddd;
+}
+
+@media (max-width: 992px) {
+	section.top-videos .container .video-player {
+		flex-wrap: wrap;
+	}
+
+	section.top-videos .container .video-player .top-videos {
+		width: 100%;
+	}
+
+	section.top-videos .container .video-player .video {
+		row-gap: 20px;
+	}
+}
+
+section.top-videos .container .video-player .top-videos .title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	background-color: #eee;
+	font-weight: 700;
+}
+
+section.top-videos .container .video-player .top-videos ul {
+	background-color: white;
+	min-width: 270px;
+} 
+
+section.top-videos .container .video-player .top-videos ul li {
+	padding: 20px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	row-gap: 10px;
+	position: relative;
+	cursor: pointer;
+	transition: 0.4s ease all;
+	width: 100%;
+}
+
+section.top-videos .container .video-player .top-videos ul li:hover {
+	background-color: #fafafa;
+}
+
+section.top-videos .container .video-player .top-videos ul li::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: #ddd;
+	top: 0px;
+	left: 0px;
+}
+
+section.top-videos .container .video-player .top-videos ul li a {
+	color: #000;
+	transition: 0.4s ease all;
+}
+
+section.top-videos .container .video-player .top-videos ul li:hover > a {
+	color: var(--main-color);
+}
+
+section.top-videos .container .video-player .video {
+	padding: 10px;
+	flex-grow: 1;
+	background-color: #ddd;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+section.top-videos .container .video-player .video > img {
+	max-width: 100%;
+	height: auto;
+}
+
+section.top-videos .container .video-player .video .video-title {
+	background-color: white;
+	padding: 15px 20px;
+	color: #000;
+	width: 100%;
+}
+
+/*End Top Videos Section*/
 
