@@ -1608,3 +1608,91 @@ section.top-videos .container .video-player .video .video-title {
 
 /*End Top Videos Section*/
 
+/*Start Stats Section*/
+
+section.stats {
+	padding: var(--main-padding) 0px;
+	background: url("../images/stats-64f1af67d1939.webp");
+	position: relative;
+	z-index: 1;
+}
+
+section.stats::after {
+	content: "";
+	background-color: #fff;
+	opacity: 0.95;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: -1;
+}
+
+section.stats .container {
+	margin-top: 70px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 40px;
+}
+
+section.stats h1 {
+	text-align: center;
+	font-size: 2.5rem;
+	width: 100%;
+}
+
+section.stats .container .box {
+	background-color: white;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 15px;
+	position: relative;
+}
+
+section.stats .container .box::after {
+	content: "";
+	height: 0%;
+	width: 3px;
+	background-color: var(--main-color);
+	transition: 0.4s all ease;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+section.stats .container .box::before {
+	content: "";
+	height: 0%;
+	width: 3px;
+	background-color: var(--main-color);
+	transition: 0.4s all ease;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+section.stats .container .box:hover::after {
+	height: 100%;
+}
+
+section.stats .container .box:hover::before {
+	height: 100%;
+}
+
+section.stats .container .box span:nth-child(2) {
+	font-size: 2.5rem;
+	font-weight: 700;
+}
+
+section.stats .container .box span:nth-child(3) {
+	color: var(--main-color);
+	font-style: italic;
+	font-weight: 700;
+	font-size: 1.3rem;
+}
+
+/*End Stats Section*/
