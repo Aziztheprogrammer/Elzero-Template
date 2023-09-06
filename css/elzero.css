@@ -1,5 +1,5 @@
 /* Start Global Rules */
-
+/*Developed By Aziz Berhouma*/
 * {
 	box-sizing: border-box;
 	padding: 0px;
@@ -1813,3 +1813,168 @@ section.discount .request > form > input[type="submit"]:hover {
 }
 
 /*End A Discount Section*/
+
+/*Start Footer*/
+
+footer {
+	width: 100%;
+	background-color: #000;
+	color: #f5f5f5;
+}
+
+footer .main .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 40px;
+}
+
+footer .main {
+	padding: var(--main-padding) 0px;
+}
+
+footer .main .container .owner {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+@media (max-width: 992px) {
+	footer .main .container .owner {
+		align-items: center;
+		text-align: center;
+	}
+}
+
+footer .main .container .owner h1 {
+	font-size: 2.5rem;
+}
+
+footer .main .container .owner ul {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	column-gap: 15px;
+	margin-bottom: 20px;
+}
+
+footer .main .container .owner ul li {
+	width: 40px;
+	height: 40px;
+	background-color: #666;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.4s ease all;
+}
+
+footer .main .container .owner ul li:nth-child(1):hover {
+	background-color: blue;
+}
+
+footer .main .container .owner ul li:nth-child(2):hover {
+	background-color: cyan;
+}
+
+footer .main .container .owner ul li:nth-child(3):hover {
+	background-color: red;
+}
+
+footer .main .container .owner ul li a {
+	color: #eee;
+	font-size: 1.2rem;
+}
+
+footer .main .container .owner p {
+	color: #f5f5f5;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+footer .main .container .links li {
+	padding: 15px 0px;
+	position: relative;
+	border-bottom: 1px #666 solid;
+}
+
+footer .main .container .links li:last-child {
+	border-bottom: none;
+}
+
+footer .main .container .links li a {
+	color: #ddd;
+	transition: 0.4s all ease;
+}
+
+footer .main .container .links li a::before {
+	font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+footer .main .container .links li:hover > a {
+	margin-left: 15px;
+	color: #f5f5f5;
+}
+
+footer .main .container .info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 15px;
+}
+
+footer .main .container .info > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 15px;
+}
+
+@media (max-width: 992px) {
+	footer .main .container .info {
+		align-items: center;
+	}
+
+	footer .main .container .info > div {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		row-gap: 10px;
+	}
+}
+
+footer .main .container .info > div i {
+	color: var(--main-color);
+	font-size: 1.5rem;
+}
+
+footer .main .container .info > div p {
+	line-height: 2;
+	color: #ddd;
+}
+
+footer .main .container .gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+	grid-gap: 10px;
+	height: fit-content;
+}
+
+footer .main .container .gallery img {
+	max-width: 100%;
+	height: auto;
+	border: 3px #f5f5f5 solid;
+}
+
+footer .copyright {
+	text-align: center;
+	padding: 20px 0px;
+	border-top: #666 solid 1px;
+}
+
+
+/*End Footer*/
